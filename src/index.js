@@ -8,9 +8,7 @@ import {userRouter} from "./routes/users.js";
 import { recipesRouter } from "./routes/recipes.js";
 
 const app=express();
-const cors = require("cors")
-app.use(express.json());
-app.use(cors()); 
+app.use(express.json()); 
 
 app.use("/auth",userRouter);
 app.use("/recipes",recipesRouter);
